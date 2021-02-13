@@ -16,6 +16,7 @@ function create(){
     let inp = document.createElement("input");
     let firstDiv = document.createElement("div");
     let thirdDiv = document.createElement("div");
+    console.log(count);
 
     //Set attr
     inp.setAttribute("id", "div2");
@@ -44,28 +45,19 @@ function create(){
 
     // listen to the DOM
 
-    firstDiv.addEventListener("click", ()=>{
-        // = parseInt(aboveDiv.textContent -= count);
-    return subNum;
-
-
-    })
+    if (firstDiv){
+        firstDiv.addEventListener("click", ()=>{
+            count -= count;
+            aboveDiv.textContent = count;
+        });
+    } else if (thirdDiv){
+        thirdDiv.addEventListener("click", ()=>{
+            count += count;
+            aboveDiv.textContent = count;
+        })
+    }
 }
 create();
-
-
-
-
-// selector.addEventListener("click", ()=>{
-//     subNum = parseInt(aboveDiv.textContent -= count);
-//     return subNum;
-// });
-
-// selectorThree.addEventListener("click", ()=>{
-//     addNum = parseInt(aboveDiv.textContent += count);
-//     return addNum;
-//     console.log(addNum);
-// });
 
 
 
