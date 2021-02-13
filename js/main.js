@@ -1,10 +1,6 @@
-// alert("Hello World");
-let selector = document.querySelector("#div1");
-let selectortwo = document.querySelector("#div2");
-let selectorThree = document.querySelector("#div3");
 let aboveDiv = document.querySelector("#abovediv");
 let parentDiv = document.querySelector("#selectmetwo");
-console.log(parentDiv);
+
 
 let count = 1;
 aboveDiv.textContent = 0;
@@ -46,14 +42,16 @@ function create(){
     // listen to the DOM
 
     if (firstDiv){
-        firstDiv.addEventListener("click", ()=>{
+        firstDiv.addEventListener("click", (e)=>{
             count -= inp.value;
             aboveDiv.textContent = count;
+            console.log(e)
         });
     } else if (thirdDiv){
-        thirdDiv.addEventListener("click", ()=>{
+        thirdDiv.addEventListener("click", (e)=>{
             count += inp.value;
             aboveDiv.textContent = count;
+            console.log(e);
         })
     }
 }
