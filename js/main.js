@@ -41,21 +41,24 @@ function create(){
 
     // listen to the DOM
 
-    if (firstDiv){
-        firstDiv.addEventListener("click", (e)=>{
-            count -= inp.value;
-            aboveDiv.textContent = count;
-            console.log(e)
-        });
-    } else if (thirdDiv){
-        thirdDiv.addEventListener("click", (e)=>{
-            count += inp.value;
-            aboveDiv.textContent = count;
-            console.log(e);
-        })
+    selectmetwo.addEventListener("click", (e)=>{
+        if (e.target.id === "div1"){
+            count -= parseInt(inp.value);
+        aboveDiv.textContent = count;
+        console.log(e)
+        } else if (e.target.id === "div3"){
+            thirdDiv.addEventListener("click", (e)=>{
+                count += parseInt(inp.value);
+                aboveDiv.textContent = count;
+                console.log(e);
+    })
+    
+        }
     }
+    )
+
+    
 }
 create();
-
 
 
