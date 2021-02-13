@@ -47,12 +47,12 @@ function create(){
 
     if (firstDiv){
         firstDiv.addEventListener("click", ()=>{
-            count -= count;
+            count -= inp.value;
             aboveDiv.textContent = count;
         });
     } else if (thirdDiv){
         thirdDiv.addEventListener("click", ()=>{
-            count += count;
+            count += inp.value;
             aboveDiv.textContent = count;
         })
     }
