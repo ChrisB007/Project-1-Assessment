@@ -2,7 +2,7 @@ let aboveDiv = document.querySelector("#abovediv");
 let parentDiv = document.querySelector("#selectmetwo");
 
 
-let count = 1;
+let count = 0;
 aboveDiv.textContent = 0;
 
 
@@ -36,19 +36,19 @@ function create(){
     parentDiv.append(inp);
     parentDiv.append(thirdDiv);
 
-    firstDiv.textContent = "-";
-    thirdDiv.textContent = "+";
+    firstDiv.textContent = "+";
+    thirdDiv.textContent = "-";
 
     // listen to the DOM
 
     selectmetwo.addEventListener("click", (e)=>{
         if (e.target.id === "div1"){
-            count -= parseInt(inp.value);
+            count += parseInt(inp.value);
         aboveDiv.textContent = count;
         console.log(e)
         } else if (e.target.id === "div3"){
             thirdDiv.addEventListener("click", (e)=>{
-                count += parseInt(inp.value);
+                count -= parseInt(inp.value);
                 aboveDiv.textContent = count;
                 console.log(e);
     })
